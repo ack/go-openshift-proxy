@@ -12,9 +12,9 @@ import (
 
 
 func main() {
-	target := os.Getenv("TARGET")
+	target := os.Getenv("target")
 	if target == "" {
-		log.Panicf("Missing required ENV var TARGET")
+		log.Panicf("Missing required ENV var target")
 	}
 	parsed, err := url.Parse(fmt.Sprintf("http://%s", target))
 	if err != nil {
